@@ -1,0 +1,15 @@
+{
+  "name": "@react-chat-monorepo/firebase",
+  "version": "1.0.0",
+  "description": "Firebase client sdk",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^7.19.1"
+  }
+}
