@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import UserDetailsPage from "./pages/user-details/UserDetails";
-import { initDatabase} from "@react-chat-monorepo/core";
+import { initDatabase } from "@react-chat-monorepo/core";
 
 // TODO: add dynamic imports
 const App = (): any => {
