@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@react-chat-monorepo/firebase": "1.0.0"
+    "@react-chat-monorepo/firebase": "1.0.0",
+    "react": "^16.13.1"
   },
   "author": "",
   "license": "ISC"

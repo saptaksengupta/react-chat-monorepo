@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import "./App.css";
-import UserDetailsPage from "./pages/user-details/UserDetails";
+import UserDetailsPage from "./pages/user-select/UserSelect";
 import { initDatabase } from "@react-chat-monorepo/core";
+import { UserSelectionContextProvider } from "@react-chat-monorepo/core";
 
 // TODO: add dynamic imports
 const App = (): any => {
@@ -20,9 +21,10 @@ const App = (): any => {
   return (
     <BrowserRouter>
       <Switch>
-      <Route exact path='' component={UserDetailsPage} />
-        <Route exact path='/hola' component={UserDetailsPage} />
-        <Route exact path='/user/conversassions' component={UserDetailsPage} />
+        <UserSelectionContextProvider>
+          <Route exact path="" component={UserDetailsPage} />
+          <Route exact path="/hola" component={UserDetailsPage} />
+        </UserSelectionContextProvider>
       </Switch>
     </BrowserRouter>
   );

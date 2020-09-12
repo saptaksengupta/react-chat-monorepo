@@ -1,6 +1,7 @@
 
 export const USER_ACTIONS = {
-    SET_USER: 'SET_USER',
+    SET_AUTH_USER: 'SET_AUTH_USER',
+    SET_SELECTED_USER: 'SET_SELECTED_USER',
     REMOVE_USER: 'REMOVE_USER'
 }
 
@@ -15,6 +16,11 @@ export const UserReducer = (state, action) => {
             flushUserDetails();
             return {
                 ...state   
+            }
+        case USER_ACTIONS.SET_SELECTED_USER:
+            return {
+                ...state,
+                selectedUserDetails: action.payload.selectedUserDetails
             }
         default:
             return state;
