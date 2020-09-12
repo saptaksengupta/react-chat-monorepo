@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { DEMO_USERS } from '@react-chat-monorepo/core';
 
 const Container = styled.div`
   min-height: 100%;
@@ -13,13 +14,8 @@ const UserProfilesContainer = styled.div`
     display: flex;
     align-items:center;
     margin-bottom: 5em;
-    max-width: 100%;
+    max-width: 90%;
     overflow: scroll;
-    div {
-        margin: 1em;
-        width: 99%;
-        min-width: 100%;
-    }
 `;
 
 const InputWithBtn = styled.div`
@@ -27,17 +23,41 @@ const InputWithBtn = styled.div`
     justify-content: center;
 `;
 
+const StyledAvatar = styled.img`
+    border-radius: 10px;
+`;
+
+const StyledUserContainer = styled.div`
+    margin: 1em;
+    width: 99%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: cente;
+`;
+
 const UserDetailsPage: React.FC = () => {
+
+  const getUserLists = () => {
+    return DEMO_USERS.map((user, index) => {
+      return (
+        <StyledUserContainer key={index}>
+          <div style={{display: 'flex', justifyContent: 'center'}}>{user.nickName}</div>
+          <div style={{display: 'flex', justifyContent: 'center'}}>
+          <StyledAvatar src={user.image_url_sm} alt="Avatar"/>
+          </div>
+        </StyledUserContainer>
+      )
+    })
+  }
+
   return (
     <>
       <Container>
           <div style={{width: '100%'}}>
               <UserProfilesContainer>
-                <div>User 1</div>
-                <div>User 2</div>
-                <div>User 3</div>
-                <div>User 4</div>
-                <div>User 5</div>
+                {getUserLists()}
               </UserProfilesContainer>
               <InputWithBtn>
                     <div>
