@@ -3,13 +3,20 @@
   "version": "1.0.0",
   "description": "A react and react native chat application as monorepo",
   "main": "index.js",
-  "private":"true",
+  "private": "true",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "start": "lerna run start --stream",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "customize-cra": "^1.0.0",
+    "lerna": "^3.22.1",
+    "react-app-rewired": "^2.1.6"
+  }
 }

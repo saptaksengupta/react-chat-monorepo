@@ -2,13 +2,23 @@
   "name": "@react-chat-monorepo/core",
   "version": "1.0.0",
   "description": "core functions and utils",
-  "main": "index.ts",
+  "main": "src/index.ts",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@react-chat-monorepo/firebase": "1.0.0",
     "react": "^16.13.1"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.2.0",
+    "typescript": "3.6.4",
+    "@types/node": "12.11.1",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0"
   },
   "author": "",
   "license": "ISC"
